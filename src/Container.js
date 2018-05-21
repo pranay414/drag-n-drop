@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Container.css';
 import Paragraph from './Paragraph';
 import Image from './Image';
 import Link from './Link';
@@ -7,7 +7,7 @@ import Dropzone from './Dropzone';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
 
-class App extends Component {
+class Container extends Component {
   render() {
     return (
       <div className="flex-container">
@@ -26,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(App);
+export default DragDropContext(HTML5Backend)(Container);

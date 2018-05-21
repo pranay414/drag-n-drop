@@ -13,7 +13,9 @@ const paragraphSource = {
         const dropResult = monitor.getDropResult();
 
         if(dropResult) {
-            alert(`You dropped an item!`)
+            return(
+                console.log(`Paragraph: Paragraph item dropped`)
+            )
         }
     }
 }

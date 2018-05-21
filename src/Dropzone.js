@@ -9,8 +9,11 @@ const style = {
 
 const dropTarget = {
     drop(props, monitor) {
-        console.log(`Dropped ${monitor.getItem()}`);
-        return {}
+        const item = monitor.getItem();
+        console.log(`Dropzone: Dropped ${item.name}`);
+        return {
+            name: 'dropzone'
+        }
     }
 };
 
@@ -27,7 +30,7 @@ class Dropzone extends Component {
         const { connectDropTarget, isOver, canDrop } = this.props;
         const isActive = canDrop && isOver;
         return connectDropTarget(
-            <div style={{...style}}>
+            <div style={{ ...style }}>
                 {isActive ? 'Release to drop' : 'Drag an item here'}
             </div>
         )
