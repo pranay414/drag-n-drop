@@ -4,6 +4,8 @@ import Paragraph from './Paragraph';
 import Image from './Image';
 import Link from './Link';
 import Dropzone from './Dropzone';
+import HTML5Backend from 'react-dnd-html5-backend';
+import { DragDropContext } from 'react-dnd';
 
 class App extends Component {
   render() {
@@ -24,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default DragDropContext(HTML5Backend)(App);
